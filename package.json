@@ -1,11 +1,11 @@
 {
-  "name": "typescript-npm-package-tpl",
+  "name": "ymlapi-interfaces",
   "version": "1.0.0",
-  "description": "A set of files to get moving for a typescript npm package, remove all not required",
+  "description": "Converts components and definitions to interfaces with quicktype",
   "licence": "MIT",
   "main": "./build/index.js",
   "bin": {
-    "openapi-nodegen": "./build/cli.js"
+    "ymlapi-interfaces": "./build/cli.js"
   },
   "scripts": {
     "install:githooks": "cp ./githooks/* .git/hooks",
@@ -22,22 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/johndcarmichael/openapi-nodegen-emailer.git"
+    "url": "https://github.com/johndcarmichael/ymlapi-to-interfaces"
   },
   "keywords": [
     "swagger",
     "openapi",
-    "rest",
-    "TypeScript",
-    "es6",
-    "es7",
-    "es2015",
-    "node.js",
-    "codegen",
-    "generator"
+    "asyncapi"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.25",
     "@zerollup/ts-transform-paths": "^1.7.9",
