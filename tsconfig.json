@@ -6,7 +6,6 @@
     "noImplicitAny": true,
     "sourceMap": false,
     "outDir": "build",
-    "target": "ES2018",
     "baseUrl": ".",
     "resolveJsonModule": true,
     "importHelpers": true,

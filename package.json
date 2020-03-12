@@ -1,6 +1,6 @@
 {
   "name": "ymlapi-interfaces",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Converts components and definitions to interfaces with quicktype",
   "licence": "MIT",
   "main": "./build/ParseThenOutput.js",
