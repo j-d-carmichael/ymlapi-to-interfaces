@@ -5,6 +5,7 @@ const yamljs_1 = tslib_1.__importDefault(require("yamljs"));
 const fs_extra_1 = tslib_1.__importDefault(require("fs-extra"));
 const path_1 = tslib_1.__importDefault(require("path"));
 const generateTypeScriptInterfaceText_1 = tslib_1.__importDefault(require("./generateTypeScriptInterfaceText"));
+const Strings_1 = require("quicktype/dist/quicktype-core/support/Strings");
 const $RefParser = require('json-schema-ref-parser');
 class ParseThenOutput {
     async init(relativeInputPath, relativeOutputDir) {
@@ -51,7 +52,8 @@ class ParseThenOutput {
     async walkObjects(apiObjects, outputDir) {
         const keys = Object.keys(apiObjects);
         for (let i = 0; i < keys.length; ++i) {
-            await this.generateInterfaceFile(outputDir, keys[i], apiObjects[keys[i]]);
+            const schemaName = Strings_1.pascalCase(keys[i]);
+            await this.generateInterfaceFile(outputDir, schemaName, apiObjects[keys[i]]);
         }
     }
     async generateInterfaceFile(destinationDir, schemaName, schemaObject) {

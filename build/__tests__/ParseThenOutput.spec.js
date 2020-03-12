@@ -23,7 +23,7 @@ describe('general parse and write tot disk', function () {
         const hash2 = await hasha_1.default.fromFile('src/__tests__/interfaces_2/Weathers.ts', { algorithm: 'md5' });
         expect(hash2).toBe('579568f73cedb0b42d105e37d72165a8');
         await ParseThenOutput_1.default.init('src/__tests__/srcASYNC2.yml', 'src/__tests__/interfaces_3');
-        const hash = await hasha_1.default.fromFile('src/__tests__/interfaces_3/ms_auth.cache.connection.ts', { algorithm: 'md5' });
+        const hash = await hasha_1.default.fromFile('src/__tests__/interfaces_3/MsAuthCacheConnection.ts', { algorithm: 'md5' });
         expect(hash).toBe('ca25aa11fc7de41cbbb604243ed0d61f');
         await cleanup();
     });

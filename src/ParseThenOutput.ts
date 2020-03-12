@@ -2,6 +2,7 @@ import yamljs from 'yamljs';
 import fs from 'fs-extra';
 import path from 'path';
 import generateTypeScriptInterfaceText from '@/generateTypeScriptInterfaceText';
+import { pascalCase } from 'quicktype/dist/quicktype-core/support/Strings';
 
 const $RefParser = require('json-schema-ref-parser');
 
@@ -53,7 +54,8 @@ class ParseThenOutput {
   public async walkObjects (apiObjects: any, outputDir: string): Promise<void> {
     const keys = Object.keys(apiObjects);
     for (let i = 0; i < keys.length; ++i) {
-      await this.generateInterfaceFile(outputDir, keys[i], apiObjects[keys[i]]);
+      const schemaName = pascalCase(keys[i]);
+      await this.generateInterfaceFile(outputDir, schemaName, apiObjects[keys[i]]);
     }
   }
 
