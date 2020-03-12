@@ -13,6 +13,7 @@ class ParseThenOutput {
         const fileType = this.whichApiFileType(ymlObj);
         const outputDir = path_1.default.join(process.cwd(), relativeOutputDir);
         fs_extra_1.default.ensureDirSync(outputDir);
+        fs_extra_1.default.emptyDirSync(outputDir);
         if (fileType === 'openapi_2') {
             await this.openapi2handle(ymlObj, outputDir);
         }
