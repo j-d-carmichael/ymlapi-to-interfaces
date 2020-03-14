@@ -1,11 +1,14 @@
 {
   "name": "ymlapi-interfaces",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Converts components and definitions to interfaces with quicktype",
   "licence": "MIT",
   "main": "./build/ParseThenOutput.js",
   "bin": {
-    "ymlapi-interfaces": "./build/cli.js"
+    "ymlapi-interfaces": "./bin/cli.js"
+  },
+  "engines": {
+    "node": "10"
   },
   "scripts": {
     "install:githooks": "cp ./githooks/* .git/hooks",
